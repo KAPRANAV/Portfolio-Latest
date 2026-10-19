@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PRANAV PORTFOLIO</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Hanken+Grotesk:wght@300..700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="top" id="topbar">
+    <div class="wrap bar">
+      <a class="mark" href="#hero" aria-label="Pranav, back to top">Portfolio</a>
+      <nav class="nav" id="nav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#toolbox">Toolbox</a>
+        <a href="#path">Path</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="tools">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="8" />
+            <path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor" />
+          </svg>
+        </button>
+        <button class="btn small" type="button" data-resume>Résumé</button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"
+            aria-hidden="true">
+            <path d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="prog" id="prog"></div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero" data-shape="0">
+      <div class="wrap">
+        <p class="status fade"><i></i><span id="statusText">software developer</span>
+
+        </p>
+        <h1 class="name" id="name" aria-label="Pranav"><span class="line">Pranav</span>
+        </h1>
+        <figure class="portrait" id="portrait">
+          <div class="pp-tilt">
+            <div class="pp-back"></div>
+            <div class="pp-paper"></div>
+            <div class="pp-photo"><img id="ppImg" alt="Portrait of Pranav Sachu" decoding="async"></div>
+          </div>
+        </figure>
+        <div class="hero-foot">
+          <p class="lede fade">Welcome to my corner of the web! Step inside to explore my projects, my technical mindset, and my passion for full-stack development.</p>
+          <div class="cta fade">
+            <a class="btn solid mag" href="#work">See my work</a>
+            <button class="btn mag" type="button" data-resume>Download résumé</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" data-shape="1">
+      <div class="wrap split-grid">
+        <h2 class="sec split">About me</h2>
+        <div>
+          <p class="fill" id="fill">I'm a computer science graduate who learns by shipping. I like problems where a
+            clean data model makes everything else easier, and I sweat the small details that make an interface feel
+            quick.</p>
+          <dl class="facts" id="facts"></dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="work" data-shape="2">
+      <div class="wrap p-head">
+        <h2 class="sec split">Selected work</h2>
+        <p class="hint">Three projects, each built end to end. Open a card for the build notes.</p>
+      </div>
+      <div class="wrap hbar-wrap" aria-hidden="true">
+        <div class="hbar"><i id="hbarFill"></i></div>
+      </div>
+      <div class="p-view">
+        <div class="p-track" id="track"></div>
+      </div>
+    </section>
+
+    <section class="toolbox" id="toolbox" data-shape="3">
+      <div class="wrap">
+        <h2 class="sec split">Toolbox</h2>
+      </div>
+      <div class="marq" id="m1" aria-hidden="true">
+        <div class="row"></div>
+      </div>
+      <div class="marq" id="m2" aria-hidden="true">
+        <div class="row"></div>
+      </div>
+      <div class="wrap">
+        <div class="groups" id="groups"></div>
+      </div>
+    </section>
+
+    <section class="path" id="path" data-shape="4">
+      <div class="wrap split-grid">
+        <h2 class="sec split">Path so far</h2>
+        <div class="path-list" id="pathList">
+          <div class="path-line"><i class="path-fill" id="pathFill"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" data-shape="5">
+      <div class="wrap">
+        <h2 class="sec split">Want to Contact Me?</h2>
+        <p class="sub">Email is the fastest way to reach me. You can also message me on WhatsApp, or ask the assistant a
+          quick question first.</p>
+        <div class="mail-row">
+          <span class="mail" id="mail"></span>
+          <button class="btn" type="button" id="copyMail">Copy email</button>
+        </div>
+        <div class="links" id="links">
+          <button class="btn solid mag" type="button" id="openWa2">Message on WhatsApp</button>
+          <button class="btn mag" type="button" id="openAi2">Ask the assistant</button>
+          <button class="btn mag" type="button" data-resume>Download résumé</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 K A PRANAV. All rights reserved.</p>
+      <a href="#hero">Back to top</a>
+    </div>
+  </footer>
+
+  <div class="fab-stack">
+    <button class="fab ai" id="aiFab" type="button" aria-expanded="false" aria-controls="aiPanel"
+      aria-label="Ask AI assistant">
+      <span class="fab-icon fab-default" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M12 2L13.8 7.2L19 9L13.8 10.8L12 16L10.2 10.8L5 9L10.2 7.2L12 2Z" />
+          <path d="M19 14L19.9 16.6L22.5 17.5L19.9 18.4L19 21L18.1 18.4L15.5 17.5L18.1 16.6L19 14Z" />
+          <path d="M5.5 15L6.3 17.2L8.5 18L6.3 18.8L5.5 21L4.7 18.8L2.5 18L4.7 17.2L5.5 15Z" />
+        </svg>
+      </span>
+      <span class="fab-icon fab-close" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </span>
+      <span class="fab-tooltip" role="tooltip">Ask AI assistant</span>
+    </button>
+    <button class="fab wa" id="waFab" type="button" aria-expanded="false" aria-controls="waPanel"
+      aria-label="Chat on WhatsApp">
+      <span class="fab-icon fab-default" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="23" height="23" fill="currentColor">
+          <path
+            d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.71C7.02 10.93 7.91 12.11 8.03 12.28C8.16 12.44 9.77 14.94 12.25 16.01C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.69 16.03 16.9 15.45C17.11 14.86 17.11 14.36 17.05 14.26C16.99 14.15 16.83 14.09 16.58 13.97C16.34 13.84 15.13 13.25 14.9 13.17C14.68 13.08 14.52 13.04 14.35 13.29C14.19 13.53 13.72 14.09 13.58 14.26C13.43 14.42 13.29 14.44 13.05 14.32C12.8 14.19 11.99 13.93 11.04 13.08C10.3 12.42 9.8 11.61 9.65 11.36C9.51 11.12 9.64 10.98 9.76 10.86C9.87 10.75 10.01 10.57 10.13 10.42C10.25 10.28 10.3 10.17 10.38 10.01C10.46 9.84 10.42 9.7 10.36 9.58C10.3 9.45 9.83 8.3 9.63 7.83C9.44 7.37 9.24 7.43 9.09 7.42C8.95 7.42 8.78 7.41 8.62 7.41L8.53 7.33Z" />
+        </svg>
+      </span>
+      <span class="fab-icon fab-close" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </span>
+      <span class="fab-tooltip" role="tooltip">Chat on WhatsApp</span>
+    </button>
+  </div>
+
+  <section class="panel" id="aiPanel" role="dialog" aria-label="Portfolio assistant" hidden>
+    <div class="p-top">
+      <div class="av" aria-hidden="true">PS</div>
+      <div class="grow"><b>Ask about Pranav</b><small id="aiStatus">Quick answers</small></div>
+      <button class="icon-btn" type="button" data-close="aiPanel" aria-label="Close assistant"><svg viewBox="0 0 24 24"
+          width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg></button>
+    </div>
+    <div class="msgs" id="msgs" role="log" aria-live="polite"></div>
+    <div class="chips" id="chips"></div>
+    <p class="note" id="aiNote" hidden>Answers are written by Claude from the details on this page, and count toward
+      your own Claude usage.</p>
+    <form class="p-form" id="chatForm" autocomplete="off">
+      <input id="chatIn" type="text" placeholder="Ask about projects, skills, contact" aria-label="Your question"
+        maxlength="400">
+      <button class="btn solid small" id="chatSend" type="submit">Send</button>
+    </form>
+  </section>
+
+  <section class="panel wa-panel" id="waPanel" role="dialog" aria-label="Message on WhatsApp" hidden>
+    <div class="p-top">
+      <div class="av" aria-hidden="true">PS</div>
+      <div class="grow"><b>Pranav Sachu</b><small>Message me directly on WhatsApp</small></div>
+      <button class="icon-btn" type="button" data-close="waPanel" aria-label="Close WhatsApp panel"><svg
+          viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg></button>
+    </div>
+    <div class="wa-body">
+      <div class="msg bot">Hi, thanks for stopping by. Pick a topic or write your own message. It opens in WhatsApp,
+        ready to send.</div>
+      <div class="chips" style="padding:0" id="waChips"></div>
+      <textarea id="waText" rows="3" aria-label="Your message"
+        style="font:inherit;font-size:.95rem;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem;resize:none"
+        placeholder="Write your message"></textarea>
+      <a class="btn" id="waGo" href="https://wa.me/" target="_blank" rel="noopener">Open WhatsApp</a>
+      <p class="num" id="waNum" hidden></p>
+    </div>
+  </section>
+
+  <div class="modal" id="modal" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="icon-btn close" type="button" id="mClose" aria-label="Close build notes"><svg viewBox="0 0 24 24"
+          width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg></button>
+      <p class="kind" id="mKind"></p>
+      <h3 id="mTitle"></h3>
+      <p id="mBlurb"></p>
+      <ul class="tags" id="mTags" style="margin-top:1rem"></ul>
+      <h4>Overview</h4>
+      <p id="mProblem"></p>
+      <h4>Implementation</h4>
+      <p id="mBuilt"></p>
+      <h4>Highlights</h4>
+      <p id="mLearned"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cur" id="cur" aria-hidden="true"></div>
+
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Main Application Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>

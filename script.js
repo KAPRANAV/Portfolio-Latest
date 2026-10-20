@@ -1,6 +1,43 @@
 (function () {
   "use strict";
 
+  /* ---------- loading screen ---------- */
+  (function () {
+    var screen = document.getElementById("loaderScreen");
+    var fill = document.getElementById("loaderFill");
+    if (!screen || !fill) return;
+    var pct = 0;
+    var done = false;
+    // Simulate progress while page loads
+    var interval = setInterval(function () {
+      if (done) return;
+      // Slow down as we approach 90%
+      var step = pct < 40 ? 8 : pct < 70 ? 4 : 1.2;
+      pct = Math.min(90, pct + step * Math.random());
+      fill.style.width = pct + "%";
+    }, 180);
+    function dismiss() {
+      if (done) return;
+      done = true;
+      clearInterval(interval);
+      fill.style.width = "100%";
+      setTimeout(function () {
+        screen.classList.add("done");
+        document.body.style.overflow = "";
+      }, 400);
+      // Remove from DOM after transition
+      setTimeout(function () {
+        if (screen.parentNode) screen.parentNode.removeChild(screen);
+      }, 1000);
+    }
+    window.addEventListener("load", function () {
+      // Give fonts/images a moment to settle
+      setTimeout(dismiss, 300);
+    });
+    // Safety net: dismiss after 6s max
+    setTimeout(dismiss, 6000);
+  })();
+
   /* ---------- content: edit here ---------- */
   var C = {
     name: "Pranav Sachu",
@@ -836,6 +873,13 @@
     clip(".pp-back", tornPolygon(100, 125, 29, 2.3, 0));
     clip(".pp-photo", tornPolygon(90, 107.5, 53, 1.5, 0.8));
     var img = $("#ppImg");
+    var ppPhotoEl = $(".pp-photo");
+    img.addEventListener("load", function () {
+      if (ppPhotoEl) {
+        ppPhotoEl.classList.remove("skeleton");
+        ppPhotoEl.classList.add("loaded");
+      }
+    });
     img.src = "./file_0000000086108211b0f62c61bad212b4.png";
     if (location.hash === "#edit") {
       var lab = el("label", "btn", "Preview your photo"),

@@ -14,6 +14,19 @@
 </head>
 
 <body>
+  <!-- Loading Screen -->
+  <div class="loader-screen" id="loaderScreen">
+    <div class="loader-content">
+      <div class="loader-mark" aria-hidden="true">
+        <span class="loader-text">Portfolio</span><span class="loader-dot"></span>
+      </div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderFill"></div>
+      </div>
+      <p class="loader-tagline">Loading experience&hellip;</p>
+    </div>
+  </div>
+
   <header class="top" id="topbar">
     <div class="wrap bar">
       <a class="mark" href="#hero" aria-label="Pranav, back to top">Portfolio</a>
@@ -56,7 +69,7 @@
           <div class="pp-tilt">
             <div class="pp-back"></div>
             <div class="pp-paper"></div>
-            <div class="pp-photo"><img id="ppImg" alt="Portrait of Pranav Sachu" decoding="async"></div>
+            <div class="pp-photo skeleton"><img id="ppImg" alt="Portrait of Pranav Sachu" decoding="async"></div>
           </div>
         </figure>
         <div class="hero-foot">

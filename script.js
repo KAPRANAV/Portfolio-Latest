@@ -40,7 +40,7 @@
 
   /* ---------- content: edit here ---------- */
   var C = {
-    name: "Pranav Sachu",
+    name: "Pranav",
     first: "Pranav",
     role: "Fresher software developer",
     email: "pranavsachu658@gmail.com",
@@ -474,9 +474,12 @@
   $("#openWa2").addEventListener("click", function () {
     openPanel("waPanel");
   });
-  $("#openAi2").addEventListener("click", function () {
-    openPanel("aiPanel");
-  });
+  var openAiButton = $("#openAi2");
+  if (openAiButton) {
+    openAiButton.addEventListener("click", function () {
+      openPanel("aiPanel");
+    });
+  }
   $$("[data-close]").forEach(function (b) {
     b.addEventListener("click", function () {
       closePanel(b.getAttribute("data-close"));
@@ -521,7 +524,7 @@
   if (C.whatsapp) {
     var n = $("#waNum");
     n.hidden = false;
-    n.textContent = "Number: +" + C.whatsapp;
+   
   }
 
   /* ---------- assistant ---------- */
@@ -874,13 +877,20 @@
     clip(".pp-photo", tornPolygon(90, 107.5, 53, 1.5, 0.8));
     var img = $("#ppImg");
     var ppPhotoEl = $(".pp-photo");
-    img.addEventListener("load", function () {
+    function setPortraitState(state) {
       if (ppPhotoEl) {
         ppPhotoEl.classList.remove("skeleton");
-        ppPhotoEl.classList.add("loaded");
+        ppPhotoEl.classList.toggle("loaded", state === "loaded");
+        ppPhotoEl.classList.toggle("error", state === "error");
       }
+    }
+    img.addEventListener("load", function () {
+      setPortraitState("loaded");
     });
-    img.src = "./file_0000000086108211b0f62c61bad212b4.png";
+    img.addEventListener("error", function () {
+      setPortraitState("error");
+    });
+    if (img.complete) setPortraitState(img.naturalWidth > 0 ? "loaded" : "error");
     if (location.hash === "#edit") {
       var lab = el("label", "btn", "Preview your photo"),
         inp = el("input");

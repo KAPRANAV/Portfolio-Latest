@@ -943,6 +943,8 @@ footer p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 32%;
+  transform: scale(1.16);
 }
 
 @media (min-width: 860px) {
@@ -1632,6 +1634,22 @@ body:has(.loader-screen:not(.done)) > *:not(.loader-screen) {
 .pp-photo.loaded img {
   opacity: 1;
   transition: opacity .5s ease;
+}
+
+.pp-photo.error::after {
+  content: "Portrait unavailable";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: center;
+}
+
+.pp-photo.error img {
+  opacity: 0;
 }
 
 @keyframes shimmer {

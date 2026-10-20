@@ -69,7 +69,7 @@
           <div class="pp-tilt">
             <div class="pp-back"></div>
             <div class="pp-paper"></div>
-            <div class="pp-photo skeleton"><img id="ppImg" alt="Portrait of Pranav Sachu" decoding="async"></div>
+            <div class="pp-photo skeleton"><img id="ppImg" src="./file_0000000086108211b0f62c61bad212b4.png" alt="Portrait of Pranav Sachu" decoding="async" fetchpriority="high"></div>
           </div>
         </figure>
         <div class="hero-foot">
@@ -134,7 +134,7 @@
     <section class="contact" id="contact" data-shape="5">
       <div class="wrap">
         <h2 class="sec split">Want to Contact Me?</h2>
-        <p class="sub">Email is the fastest way to reach me. You can also message me on WhatsApp, or ask the assistant a
+        <p class="sub">WhatsApp is the fastest way to reach me. You can also message me on Email, or ask the assistant a
           quick question first.</p>
         <div class="mail-row">
           <span class="mail" id="mail"></span>
@@ -142,7 +142,7 @@
         </div>
         <div class="links" id="links">
           <button class="btn solid mag" type="button" id="openWa2">Message on WhatsApp</button>
-          <button class="btn mag" type="button" id="openAi2">Ask the assistant</button>
+        
           <button class="btn mag" type="button" data-resume>Download résumé</button>
         </div>
       </div>
@@ -215,7 +215,7 @@
   <section class="panel wa-panel" id="waPanel" role="dialog" aria-label="Message on WhatsApp" hidden>
     <div class="p-top">
       <div class="av" aria-hidden="true">PS</div>
-      <div class="grow"><b>Pranav Sachu</b><small>Message me directly on WhatsApp</small></div>
+      <div class="grow"><b>Pranav</b><small>Message me directly on WhatsApp</small></div>
       <button class="icon-btn" type="button" data-close="waPanel" aria-label="Close WhatsApp panel"><svg
           viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
           aria-hidden="true">
@@ -223,8 +223,7 @@
         </svg></button>
     </div>
     <div class="wa-body">
-      <div class="msg bot">Hi, thanks for stopping by. Pick a topic or write your own message. It opens in WhatsApp,
-        ready to send.</div>
+      <div class="msg bot">Hi, thanks for stopping by. Pick a topic or write your own message. It opens in WhatsApp,ready to send.</div>
       <div class="chips" style="padding:0" id="waChips"></div>
       <textarea id="waText" rows="3" aria-label="Your message"
         style="font:inherit;font-size:.95rem;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem;resize:none"

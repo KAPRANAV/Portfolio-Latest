@@ -50,7 +50,7 @@
     summary:
       "Computer science graduate (2026) building full-stack web apps with React, Node.js and SQL. Learns by shipping, writes tests for the tricky parts, and is looking for a first full-time developer role on a team that values code review.",
     facts: {
-      Education: "B.Tech, Computer Science and Engineering, 2026",
+      Education: "Computer Science and Engineering",
       Focus: "Full-stack web development",
       "Learning now": "RAG and Java Full Stack",
       "Open to": "Full-time roles and internships",
